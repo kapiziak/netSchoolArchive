@@ -13,3 +13,7 @@ def index(req):
 def detail(req, document_id):
     document = get_object_or_404(Document, pk=document_id)
     return render(req, 'Documents/detail.html', {'document': document})
+
+
+def post(req, document_id):
+    return render(req, 'Documents/post.html')
